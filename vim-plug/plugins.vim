@@ -73,9 +73,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'puremourning/vimspector'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
-    " Theme 
+      
+    "Theme 
     Plug 'navarasu/onedark.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'Mofiqul/dracula.nvim'
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    Plug 'jose-elias-alvarez/typescript.nvim'
 
 call plug#end()

@@ -4,15 +4,8 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" EASY CAPS - Shift + u = upper case, u = lower case
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
-
-" Save and exit easier way 
 inoremap <C-s> <esc>:w<cr>                 " save files
 nnoremap <C-s> :w<cr>
-inoremap <C-d> <esc>:wq!<cr>               " save and exit
-nnoremap <C-d> :wq!<cr>
 inoremap <C-q> <esc>:exit<cr>               " quit discarding changes
 nnoremap <C-q> :exit<cr>
 
@@ -30,7 +23,7 @@ nnoremap <C-l> <C-w>l
 
 " Open nerdTree with keyshortcut
 let mapleader = ","
-nmap <leader>ne :NERDTree<cr>
+nmap <leader>ne :NERDTreeToggle<cr>
 
 " TABS
 noremap <Tab> :tabnext<CR>
@@ -55,7 +48,9 @@ noremap <Leader>cc
 
 "Search for all ocourrences of the phrase that you write
 nnoremap <C-f> :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ") })<CR>
-
+nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+nnoremap <Leader>fg :lua require('telescope.builtin').live_grep()<CR>
+nnoremap <Leader>fb :lua require('telescope.builtin').buffers()<CR>
 " CTRL + C now yank the selected
 vmap <C-c> "+y
 
