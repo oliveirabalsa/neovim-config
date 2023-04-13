@@ -15,6 +15,10 @@ inoremap ;; <Esc>
 vnoremap < <gv
 vnoremap > >gv
 
+" move among buffers with CTRL
+nnoremap <C-i> :bnext<CR>
+nnoremap <C-o> :bprev<CR>
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
