@@ -4,8 +4,8 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-inoremap <C-s> <esc>:w<cr>                 " save files
-nnoremap <C-s> :w<cr>
+inoremap <C-s> <esc>:w<bar>Prettier<cr> 
+nnoremap <C-s> :w<bar>Prettier <cr>                     " save files and format using Prettier
 inoremap <C-q> <esc>:exit<cr>               " quit discarding changes
 nnoremap <C-q> :exit<cr>
 
@@ -15,9 +15,6 @@ inoremap ;; <Esc>
 vnoremap < <gv
 vnoremap > >gv
 
-" move among buffers with CTRL
-nnoremap <C-i> :bnext<CR>
-nnoremap <C-o> :bprev<CR>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -34,6 +31,13 @@ noremap <Tab> :tabnext<CR>
 noremap <S-Tab> :tabprevious<CR>
 nnoremap <C-t> :tabnew<CR>
 noremap <C-e> :tabclose<CR>
+
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+" move among buffers with CTRL
+nnoremap <C-i> :bnext<CR>
+nnoremap <C-o> :bprev<CR>
 
 " No more Arrow keys, deal with it
 noremap <Up> <NOP>

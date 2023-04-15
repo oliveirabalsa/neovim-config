@@ -73,7 +73,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'puremourning/vimspector'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
-      
+    
+    " Tailwind   
+    Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+ 
     "Theme 
     Plug 'navarasu/onedark.nvim'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
